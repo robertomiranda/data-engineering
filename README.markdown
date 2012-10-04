@@ -16,3 +16,8 @@ Setup
     rake db:create
     rake db:migrate
     rails server
+
+
+**Run Tests:**
+
+    rake spec
