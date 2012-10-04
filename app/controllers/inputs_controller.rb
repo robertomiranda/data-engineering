@@ -9,10 +9,11 @@ class InputsController < ApplicationController
 
     if @input.save
       flash[:success] = "Input successfully imported,  total amount gross revenue = #{@input.total_amount}"
+      redirect_to new_input_path
     else
-      flash[:alert] = @input.errors.full_messages.to_sentence
+      flash[:error] = @input.errors.full_messages.to_sentence
+      render :new
     end
 
-    render :new
   end
 end
