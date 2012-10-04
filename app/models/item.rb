@@ -6,4 +6,6 @@ class Item < ActiveRecord::Base
 
   # - Associations
   belongs_to :merchant
+  has_many :orders
+  has_many :users, :through => :orders
 end
