@@ -3,4 +3,7 @@ class Merchant < ActiveRecord::Base
 
   # - Validations
   validates_presence_of :name, :address
+
+  # - Associations
+  has_many :items
 end
