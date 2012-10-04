@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  attr_accessible :count
+  attr_accessible :count, :item, :user
 
   # - Associations
   belongs_to :item
